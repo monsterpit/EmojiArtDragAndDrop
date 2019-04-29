@@ -22,6 +22,7 @@
 		2C2A4D292276A2C500257078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C2A4D2C2276A2C500257078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C2A4D2E2276A2C500257078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BCFAFF42276D17C00E17744 /* DragAndDrop.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = DragAndDrop.rtfd; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 				2C2A4D292276A2C500257078 /* Assets.xcassets */,
 				2C2A4D2B2276A2C500257078 /* LaunchScreen.storyboard */,
 				2C2A4D2E2276A2C500257078 /* Info.plist */,
+				9BCFAFF42276D17C00E17744 /* DragAndDrop.rtfd */,
 			);
 			path = EmojiArtDragAndDrop;
 			sourceTree = "<group>";

@@ -1,0 +1,103 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf400
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 LucidaGrande;\f2\fswiss\fcharset0 Helvetica-Bold;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{check\}}{\leveltext\leveltemplateid1\'01\uc0\u10003 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\pard\tx220\tx720\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li720\fi-720\pardirnatural\qc\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	
+\f1 \uc0\u10003 
+\f0 	}
+\f2\b Drag And Drop
+\f0\b0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+{{\NeXTGraphic Screenshot 2019-04-29 at 12.00.55 PM.png \width13820 \height5940 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+Drag and Drop which is way of sharing information between apps , \
+especially with iOS 11 because on the iPad , there's quite a great multitasking ability to have 2 apps on screen at same time \
+and like nice to be able to drag and drop between them\
+\
+\
+{{\NeXTGraphic Screenshot 2019-04-29 at 12.06.43 PM.png \width14980 \height4820 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+Drag and Drop is  literally just press and hold , which we call a long press in iOS on something that can be dragged and start moving and when you do, the operating system iOS is going to let you drag that thing around and then you can drag it over things that might receive it and let go and t drops them in there.\
+\
+Using drag and drop on the desktop all the time , so now we have multitasking . what's really incredible about the way they did drag and drop.\
+Is that while you are doing and dropping and you are dragging things around you can use your other fingers and still completely use your UI however you want\
+So drag and drop is not interfered with the operation of the iPad at all \
+which is quite amazing because you could be in the middle of a dragging and say oh well actually I need to navigate to this other part of my app to drop that and it will work and it's kind of the value of having multi touch , multi fingers ,\
+You can also be in the middle of a drag and say I want to drag these other things too and just tap on other things and they will add it to the drag so they really use the multi fingers of multi touch to great effect with drag and drop \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2019-04-29 at 1.21.35 PM.png \width14180 \height5300 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+
+\f2\b So how do we implement drag and drop , what do we do in our code if we want to participate in drag and drop ??\
+
+\f0\b0 The real gateway to making this work is through these things called "
+\f2\b interactions"
+\f0\b0 \
+\
+So dragging and dropping is a View thing it's a UI thing,\
+In the same way gestures are kind of a UIView thing , you can sort of think of drag and drop is just another really powerful gesture, if you want\
+ but you don't enable drag and drop by adding the gesture recognizer instead you do it by adding a dropInteraction or a dragInteraction \
+but it looks almost exactly the same as adding a gesture recognizer \
+UIView just has this method called addInteraction \
+and it takes either a drag or drop interaction that you create \
+and the drag or drop interaction is created really easily it just has 1 argument to its delegate \
+and then whats gonna happen is when it is drag or a drop or both you can have a view both starts the delegate is going to start receiving some messages and you have to respond to those messages that are sent to it if you want to participate and those messages are really easy to respond to \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+{{\NeXTGraphic Screenshot 2019-04-29 at 1.21.59 PM.png \width14360 \height8540 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+\
+So let's take a look at that let's first look at being a drag person  \
+A view that has something in view that you want to drag into other apps .\
+If once you register that dragInteraction on your view then when user does that long press and move which looks like a drag .\
+The drag and drop , you gonna get this message dragInteraction(itemsForBeginning)  and this is really simple you are just gonna return an \
+Array of items you are willing to have dragged from your view .\
+\
+\
+\
+So what does an dragItem look like?\
+Well dragItem really only has one important thing which is what's called an itemProvider .\
+Now ItemProvider is just something that can provide the data that's gonna be dragged and you might ask well how come the dragItem just doesn't have the data the thing you wanna drag\
+ and the reason is it might be expensive for you to create that data\
+maybe it's an image or something you have to load up for some reason or do something else \
+So drag and drop is incredibly completely asynchronous\
+You start that drag and it's really lightweight and it's dragging around and almost nothing is happening as this happens \
+But then when the drop happens then if you are an item provider you have to actually give the data out , even if that takes a certain amount of time , so that why we provide a itemProvider .\
+Now luckily there's a lot of built in itemProvider , \
+Classes that already exist in iOS that our itemProviders like NSAttributedString,\
+So you can drag pick up pieces of  text and they will drag around with their fonts and everything \
+4.30s\
+\
+\
+}
