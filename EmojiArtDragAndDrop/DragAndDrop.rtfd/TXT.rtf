@@ -8,7 +8,7 @@
 \margl1440\margr1440\vieww9000\viewh8400\viewkind0
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\f0\fs24 \cf0 \
+\f0\fs24 \cf0  \
 \pard\tx220\tx720\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li720\fi-720\pardirnatural\qc\partightenfactor0
 \ls1\ilvl0\cf0 {\listtext	
 \f1 \uc0\u10003 
@@ -17,16 +17,20 @@
 \f0\b0 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 \
-{{\NeXTGraphic Screenshot 2019-04-29 at 12.00.55 PM.png \width13820 \height5940 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2019-04-29 at 12.00.55 PM.png \width13820 \height5940 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
 \
 Drag and Drop which is way of sharing information between apps , \
 especially with iOS 11 because on the iPad , there's quite a great multitasking ability to have 2 apps on screen at same time \
 and like nice to be able to drag and drop between them\
 \
 \
-{{\NeXTGraphic Screenshot 2019-04-29 at 12.06.43 PM.png \width14980 \height4820 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2019-04-29 at 12.06.43 PM.png \width14980 \height4820 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
 \
 Drag and Drop is  literally just press and hold , which we call a long press in iOS on something that can be dragged and start moving and when you do, the operating system iOS is going to let you drag that thing around and then you can drag it over things that might receive it and let go and t drops them in there.\
 \
@@ -46,14 +50,16 @@ You can also be in the middle of a drag and say I want to drag these other thing
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 {{\NeXTGraphic Screenshot 2019-04-29 at 1.21.35 PM.png \width14180 \height5300 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 \
 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\f2\b So how do we implement drag and drop , what do we do in our code if we want to participate in drag and drop ??\
+\f2\b \cf0 So how do we implement drag and drop , what do we do in our code if we want to participate in drag and drop ??\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\f0\b0 The real gateway to making this work is through these things called "
+\f0\b0 \cf0 The real gateway to making this work is through these things called "
 \f2\b interactions"
 \f0\b0 \
 \
@@ -74,8 +80,10 @@ and then whats gonna happen is when it is drag or a drop or both you can have a 
 \
 \
 \
-{{\NeXTGraphic Screenshot 2019-04-29 at 1.21.59 PM.png \width14360 \height8540 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2019-04-29 at 1.21.59 PM.png \width14360 \height8540 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
 \
 \
 So let's take a look at that let's first look at being a drag person  \
@@ -97,7 +105,59 @@ But then when the drop happens then if you are an item provider you have to actu
 Now luckily there's a lot of built in itemProvider , \
 Classes that already exist in iOS that our itemProviders like NSAttributedString,\
 So you can drag pick up pieces of  text and they will drag around with their fonts and everything \
-4.30s\
+There's  also NSString which is text without the font,\
+UIImage of course you can pick up and drag images around \
+NSURL that's really nice one you go into a web page , you pick up a URL and drop it , \
+may be it's a reference to an article or a URL for an image\
+UIColor ,\
+mapItem\
+Contact in address book\
+etc.\
+A lot of things you can pick up and move these are all itemProviders\
+\
+So to create a dragItem \
+You just create them with NSItemProvider and provide the object that is going to provide the data\
+\
+Now ofCourse you can write your own itemProvider that provides your own kind of data  , but of times you just gonna use these nice pre-made one's\
+\
+There's one other thing in dragItem which is for local drags,\
+drag and drop can work within an app and between apps \
+It only works between apps on iPad because you can only get 2 apps on screen at same time in iPad \
+but on iPhone and iPad you can do it inside the app \
+\
+And if you drag and drop inside the app then you kinda short circuit all this itemProvider business \
+and just use this little var 
+\f2\b localObject
+\f0\b0  in your dragItem and that's just mean you are dragging this local object and that local object \
+and that localObject can be anything it's of type 
+\f2\b Any
+\f0\b0  \
+so you can put anything you want there and drag and drop to drag anything in your app from one place to another .\
+\
+\
+\
+So that's just getting your drag started , you just got to provide this items for beginning array and that's it\
+\
+\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2019-04-30 at 11.51.59 AM.png \width14320 \height4840 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+If in the middle of a drag someone uses another finger to pick on something else that they want to drag then you get this message \
+itemsForAddingTo session\
+And all you have to do there is provide an array of dragItems\
+Often that array of dragItems will just be 1 dragItem or it can be empty \
+you neither items for give beginning or items for  adding 2 if you returning an empty array here means I don't have anything to drag \
+\
+\
+ 6.21\
 \
 \
 }
