@@ -12,6 +12,7 @@
 		2C2A4D282276A2BE00257078 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A4D262276A2BE00257078 /* Main.storyboard */; };
 		2C2A4D2A2276A2C500257078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A4D292276A2C500257078 /* Assets.xcassets */; };
 		2C2A4D2D2276A2C500257078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A4D2B2276A2C500257078 /* LaunchScreen.storyboard */; };
+		2CBD010E2279F0B700D88FBE /* iPadMultiTaskingTut.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 2CBD010D2279F0B700D88FBE /* iPadMultiTaskingTut.rtfd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2C2A4D292276A2C500257078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C2A4D2C2276A2C500257078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C2A4D2E2276A2C500257078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CBD010D2279F0B700D88FBE /* iPadMultiTaskingTut.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = iPadMultiTaskingTut.rtfd; sourceTree = "<group>"; };
 		9BCFAFF42276D17C00E17744 /* DragAndDrop.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = DragAndDrop.rtfd; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +64,7 @@
 				2C2A4D2B2276A2C500257078 /* LaunchScreen.storyboard */,
 				2C2A4D2E2276A2C500257078 /* Info.plist */,
 				9BCFAFF42276D17C00E17744 /* DragAndDrop.rtfd */,
+				2CBD010D2279F0B700D88FBE /* iPadMultiTaskingTut.rtfd */,
 			);
 			path = EmojiArtDragAndDrop;
 			sourceTree = "<group>";
@@ -124,6 +127,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CBD010E2279F0B700D88FBE /* iPadMultiTaskingTut.rtfd in Resources */,
 				2C2A4D2D2276A2C500257078 /* LaunchScreen.storyboard in Resources */,
 				2C2A4D2A2276A2C500257078 /* Assets.xcassets in Resources */,
 				2C2A4D282276A2BE00257078 /* Main.storyboard in Resources */,
